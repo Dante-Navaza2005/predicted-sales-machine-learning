@@ -1,0 +1,73 @@
+py -m pip install pyautogui
+
+Passo a Passo para QUALQUER ciencia de dados:
+
+#Passo 1: Etendimento do Desafio
+(eficacia de solucao significa mt dependendodo desafio, eg 95% remedio)
+
+#Passo 2: Entendimento da Área/Empresa
+
+#Passo 3: Extração/Obtenação de Dados
+
+#Passo 4: Ajuste de Dados (Tratamento/Limpeza)
+
+#Passo 5: Analise Explanatoria
+(explorar as informacoes para ver como elas estao se comportando)
+(correlação, numero que vai de -1 a 1, diz o tao relacionado que ta uma coisa, proporcional)
+
+#Passo 6: Modelagem + Algoritimos (Aqui que entra a inteligencia artificial se necessário)
+
+#Passo 7: Interpretação de resultados
+
+
+tabela.corr() mostra a correlação entre colunas, quanto maior a correlacao maior a venda
+
+seaborn as sns e matplotlib.pyplot as plt sao para fazer graficos
+
+seaborn cria e matplotlib mostra
+
+plt.show() exibe grafico
+
+sns.heatmap(tabela.corr()) mostra mapa de calor da coerencia da tabela
+
+sns.heatmap(tabela.corr(), cmap = "Blues") muda a cor do grafico para azuis
+
+sns.heatmap(tabela.corr(), annot = True) mostra os numeros
+
+dado y = de quem vc quer fazer uma previsao, nesse caso de venda
+
+dado x = o resto, as colunas que vc vai usar pra achar o y
+
+lista de colunas fica entre duas quotetes [[]]
+
+dividir dados entre dados de treino e prova para a maquina aprender
+
+from sklearn.model_selection import train_test_split serve para fazer essa separação de dados
+
+x_treino, x_teste, y_treino, y_teste = train_test_split(x, y)
+
+qaunto menos linhas o algoritimo tiver, menos ele vai aprender, a maioria dos dados fica em treino (70% treino, 30% teste)
+
+x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size = 0.3) altera o tamanho
+
+existem dezenas de modelos de aprendigazem de inteligencia artificial
+
+modelo_arvoredecisao = RandomForestRegressor() cria a inteligenciam artificial
+modelo_arvoredecisao = RandomForestRegressor()
+
+regressao linear (from sklearn.linear_model import LinearRegression): linear regression line
+
+RandomForest(Árvore de Decisão) (from sklearn.ensemble import RandomForestRegressor): Vai fazendo perguntas (tipo se eh maior que 10) eliminando opcoes 
+
+modelo_regressaolinear.fit(x_treino, y_treino) treina a inteligencia artifical com o x e y de treino
+modelo_arvoredecisao.fit(x_treino, y_treino)
+
+modelo_arvoredecisao.predict(x_teste) predict o valor de x
+
+from sklearn.metrics import r2_score calcula o r2 que predicts a % de acerto
+
+previsao_arvoredecisao(r2_score(y_teste, previsao_regressaolinear)) mostra a porcentagem de acerto
+
+tabela_auxiliar = pd.DataFrame() cria uma tabela do 0
+
+sns.lineplot(data=tabela_auxiliar) cria um grafico linear
