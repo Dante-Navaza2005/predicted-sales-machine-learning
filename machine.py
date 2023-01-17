@@ -74,6 +74,6 @@ plt.show()
 #Passo 8: criar uma nova previsao
 
 nova_tabela = pd.read_csv("novos.csv")
-previsao_arvoredecisao
+print(nova_tabela)
 previsao = modelo_arvoredecisao.predict(nova_tabela)
 print(previsao)
